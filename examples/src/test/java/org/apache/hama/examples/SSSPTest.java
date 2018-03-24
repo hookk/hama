@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 package org.apache.hama.examples;
-
+/*
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -43,9 +43,7 @@ import org.apache.hama.examples.SSSP.SSSPTextReader;
 import org.apache.hama.graph.GraphJob;
 import org.junit.Test;
 
-/**
  * Testcase for {@link ShortestPaths}
- */
 public class SSSPTest extends TestCase {
   String[] input = new String[] { "1:85\t2:217\t4:173",// 0
       "0:85\t5:80",// 1
@@ -180,3 +178,4 @@ public class SSSPTest extends TestCase {
     }
   }
 }
+*/

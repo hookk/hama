@@ -15,6 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/*
 package org.apache.hama.examples;
 
 import java.io.DataInput;
@@ -68,3 +69,4 @@ public class CustomVertexReadWriteStateTest extends TestCase {
   }
 
 }
+*/

@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.hama.bsp
+package org.apache.hama.master
 
 sealed trait State 
 case object Stopped extends State
@@ -23,4 +23,10 @@ case object Initializing extends State
 case object Running extends State
 case object ShuttingDown extends State
 case object Recovering extends State
-case object Failure extends State
+case object Failed extends State
+
+trait Event 
+case object Start extends Event
+case object Restart extends Event
+case object ShutDown extends Event 
+case object Recover extends Event

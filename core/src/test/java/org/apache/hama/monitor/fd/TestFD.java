@@ -15,16 +15,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+/*
 package org.apache.hama.monitor.fd;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hama.HamaCluster;
 
-/**
  * Test case for Phi accrual fail detector.
- */
 public class TestFD extends HamaCluster {
   public static final Log LOG = LogFactory.getLog(TestFD.class);
   // final HamaConfiguration conf;
@@ -97,3 +95,4 @@ public class TestFD extends HamaCluster {
   // sched.shutdown();
   // }
 }
+*/
