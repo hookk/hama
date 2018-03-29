@@ -179,6 +179,16 @@
       <version>3.0.5</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>2.9.9</version>
+    </dependency>
+    <dependency>
+      <groupId>io.aeron</groupId>
+      <artifactId>aeron-all</artifactId>
+      <version>1.8.2</version>
+    </dependency>
   </dependencies>
 
   <build>
