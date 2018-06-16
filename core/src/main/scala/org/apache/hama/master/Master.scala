@@ -15,13 +15,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.hama.logging
+package org.apache.hama.master
 
-import org.slf4j.LoggerFactory
-import java.io.Serializable
-
-trait Logging {
-
-  val log = LoggerFactory.getLogger(getClass)
+object Master {
+  
+}
+protected[master] class Master {
+  
   
 }

@@ -17,7 +17,13 @@
  */
 package org.apache.hama.master
 
-trait Scheduler 
+trait Scheduler {
+  
+  def start()
+  
+  def stop()
+  
+}
 
 object Scheduler {
   
@@ -27,4 +33,11 @@ object Scheduler {
 
 protected[master] class DefaultScheduler extends Scheduler {
   
+  override def start() {
+    
+  }
+  
+  override def stop() {
+    
+  }
 }

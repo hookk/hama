@@ -15,13 +15,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.hama.logging
+package org.apache.hama.master
 
-import org.slf4j.LoggerFactory
-import java.io.Serializable
+import java.text.SimpleDateFormat
+import java.util.Date
 
-trait Logging {
-
-  val log = LoggerFactory.getLogger(getClass)
+/**
+ * Create unique identifier per BSP master.
+ * TODO: replace with more unique value. 
+ */
+object IdentifierProvider {
+  
+  protected[master] val formatter = new SimpleDateFormat("yyyyMMddHHmm")
+  
+  def newIdentifier(): String = formatter.format(new Date())
   
 }

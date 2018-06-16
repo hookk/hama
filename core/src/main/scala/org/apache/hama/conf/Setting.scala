@@ -21,11 +21,13 @@ import com.typesafe.config.Config
 import com.typesafe.config.ConfigFactory
 import com.typesafe.config.ConfigValue
 import com.typesafe.config.ConfigValueFactory
+import org.apache.hama.HamaConfiguration
 import org.apache.hama.logging.Logging
 import scala.util.Failure
 import scala.util.Success
 import scala.util.Try
 import scala.reflect.ClassTag
+import scala.collection.JavaConverters._
 
 object Setting {
   
@@ -39,6 +41,8 @@ trait Setting extends Logging {
   def get[T: ClassTag](key: String): Option[T]
 
   def set[T](key: String, default: T): Setting
+  
+  def hama(): HamaConfiguration
 
 }
 
@@ -54,5 +58,13 @@ protected[conf] class DefaultSetting(config: Config) extends Setting {
   override def set[T](key: String, default: T): Setting = new DefaultSetting( 
     config.withValue(key, ConfigValueFactory.fromAnyRef(key))
   )
+  
+  override def hama(): HamaConfiguration = 
+    config.entrySet.asScala.foldLeft(new HamaConfiguration) { case (c, e) =>
+      val key = e.getKey
+      val value = e.getValue
+      c.set(key, value.toString)
+      c
+    }
   
 }
